@@ -4,6 +4,11 @@ import './App.css';
 import Sidebar from '../Sidebar/Sidebar';
 import Dashboard from '../Dashboard/Dashboard';
 
+import graph1 from '../images/graph1.png';
+import graph2 from '../images/graph2.png';
+
+
+
 
 class App extends Component{
   state = {
@@ -31,6 +36,8 @@ class App extends Component{
         :
         <div className="admin-view">
           <Sidebar mode={this.state.mode} />
+          <img src={graph1} alt="risk chart" className="risk-chart"/>
+          <img src={graph2} alt="risk chart" className="risk-chart" />
           <p>there isn't anything here yet</p>
         </div>
         }

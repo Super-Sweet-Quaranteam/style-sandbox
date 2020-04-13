@@ -91,6 +91,7 @@ li{
     margin: 12vh 0;
     cursor: pointer;
     transition: color .25s;
+    position: relative;
 }
 li:hover{
     color: var(--sp-blue);
@@ -175,3 +176,32 @@ h2, p{
     transform: translate(-50%, -50%);
 }
 
+
+
+.dropdown{
+    display: none;
+    position: absolute;
+    /* background-color: var(--sp-navy); */
+    top: 20px;
+    left: 30px;
+}
+
+li:hover .dropdown{
+    display:block;
+}
+
+.dropdown li{
+    /* display: none; */
+    margin: 2px 0;
+    font-size: .8em;
+    /* color: var(--sp-red); */
+    padding: 0 50px;
+}
+
+.dropdown li:hover{
+    color: var(--sp-red);
+}
+
+.risk-chart{
+    width: 60vw;
+}
