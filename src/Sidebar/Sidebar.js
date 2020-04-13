@@ -15,7 +15,7 @@ class Sidebar extends Component {
                         <li>workflows</li>
                         <li>projects</li>
                         <li>manage&nbsp;accounts</li>
-                        <li>logout</li>
+                        <li id="logout-button">logout</li>
                     </ul>
                 </nav>
             </div>

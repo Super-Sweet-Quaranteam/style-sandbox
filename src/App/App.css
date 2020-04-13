@@ -3,6 +3,12 @@
 /* font-family: 'Baloo Paaji 2', cursive; */
 /* font-family: 'Open Sans', sans-serif; */
 
+:root {
+  --sp-red: rgb(230, 43, 43);
+  --sp-navy: rgb(18, 18, 37);
+  --sp-blue: rgb(25, 190, 255);
+}
+
 html {
   box-sizing: border-box;
 }
@@ -24,7 +30,7 @@ body {
 
 .sidebar {
     z-index: 5;
-    background-color: rgb(18, 18, 37);
+    background-color:var(--sp-navy);
     color: white;
     position: fixed;
     top: 0;
@@ -84,14 +90,18 @@ li{
     padding: 0;
     margin: 12vh 0;
     cursor: pointer;
+    transition: color .25s;
 }
 li:hover{
-    color: red;
-    font-weight: 600;
+    color: var(--sp-blue);
+    /* font-weight: 600; */
+}
+#logout-button:hover{
+    color: var(--sp-red);
 }
 
 h1 {
-    color: rgb(18, 18, 37);
+    color:var(--sp-navy);
     font-family: 'Baloo Paaji 2', cursive;
     text-align: center ;
 }
@@ -102,19 +112,29 @@ h2, p{
 }
 
 .overview {
-    border: 3px solid red;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    background-color: white;
+    /* border: 3px solid var(--sp-red); */
     position: relative;
-    border-radius: 5vw;
+    border-radius: 2em;
     margin: 5vw;
     text-align: center;
-    padding: 0;
+    padding: 10px;
+    transition: background-color .5s;
+
+}
+
+.hover-overview{
+    font-size: 2em;
+    opacity: 0;
+    transition: opacity .5s;
 }
 
 .overview .hover-overview{display:none;}
 
 .subtitle {
     font-style: italic;
-    color: #777;
+    /* color: #777; */
 }
 
 .overview p {
@@ -123,10 +143,14 @@ h2, p{
 }
 
 .overview:hover {
-    background-color: red;
+    background-color: var(--sp-red);
+    transition: background-color .75s;
+    color: var(--sp-red);
 }
 
 .overview:hover .hover-overview {
+    transition: opacity .75s;
+    opacity: 1;
     display: block;
     position: absolute;
     width: 100%;
@@ -134,8 +158,8 @@ h2, p{
     top:0;
     left:0;
     z-index: 2;
-    background-color: red;
-    border: 3px solid red;
+    /* background-color: var(--sp-red); */
+    /* border: 3px solid var(--sp-red); */
     border-radius: 5vw;
 }
 
